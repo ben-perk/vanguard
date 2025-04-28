@@ -1,7 +1,11 @@
-/* CSS BY YOUR NAME */
+/* CSS BY Benjamin P. */
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+
+
+/* IMPORT "INTER" FROM GOOGLE FONTS" */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -27,6 +31,7 @@ time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-family: var(--font);
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -35,8 +40,12 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    align-content: center;
+    margin: 0 auto;
+    align-items: center;
+    justify-items: center;
 }
-ol, ul {
+ol, ul {   
     list-style: none;
 }
 blockquote, q {
@@ -50,7 +59,35 @@ q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    background-color: var(black);
+    border: 1px solid var(--charcoal);
+    color: var(--white)
 }
+
+th, td {
+    border-bottom: 1px solid var(--charcoal);
+    text-align: center;
+}
+
+th{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--charcoal);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--black);
+}
+
+
 
 /* ROOT VARIABLES */
 :root {
@@ -62,21 +99,208 @@ table {
     --font: "Inter", sans-serif;
 }
 
+
+
+
+
+
+header {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.5rem 0;
+    border-bottom: 3px solid var(--blue);
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
+#offer{
+    padding: 2rem 0;
+}
+
+.offer-box
+{
+    background: var(--blue);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.offer-container{
+    gap: 2rem;
+}
+
+.offer-box:hover{
+    transform: translateY(-5px);
+}
+
+#offer h3{
+    font-weight: bold;
+}
+
+
+
+#results h2{
+   text-align: left;
+}
+
+/* #results:hover{} */
+
+#about{
+    padding: 2rem 0;
+}
+
+.about-container {
+   padding: 2rem 0;
+}
+
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
 h1{ 
     color: var(--black)
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 h2{ 
     color: var(--black)
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 h3{
     color: var(--white)
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
+.container { 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--black);
+    align-items: center;
+    color: var(--white);
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img{
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
+nav .burger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+nav .links{
+    display: flex;
+    align-items: center;    
+    list-style: none;
+    gap: 2rem;
+}
+
+
+nav  ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a{
+    color:var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+nav a{
+    color: var(--blue);
+    margin-left: 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: traansform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+
+nav a:hover{
+    background-color: var(--blue);
+    color:var(--black);
+    transform: scale(1.05);
+    padding: 0.5rem 1rem;
+}
+
+#results{
+    flex-direction: column;
+    background-color: #007BFF;
+    color: var(--white);
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+    padding: 2rem;;
+}
+
+.results-container{
+    display: flex;
+    flex-direction: column;
+   width: 100%;
+   gap: 2rem;
+   padding-top: 2rem;
+}
+
+.results-table{
+   width: 10%;
+}
+.bar-chart{
+    width: 100%;
+}
+
+
+/*  */
+
+#hero button{
+    margin-top: 1rem;
+}
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+
+@media (min-width: 400px){
+   
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
@@ -85,8 +309,33 @@ h3{
     margin: 0 auto;
 }
 
+nav .burger{
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
+nav .links{
+    display: none;
+    flex-direction: column;
+    background-color: var(--black);
+    width: 100%;
+    text-align: center;
+
+}
+
+nav .links.active{
+    display: flex;
+}
+
+
+
+
+
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+ #hero
+{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -94,18 +343,128 @@ h3{
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+    color: var(--white)
+    width: 100%;
 }
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
-    content: "";
+#hero h2{
+    color: var(--white);
+    margin-bottom: 1rem;
+    color: var(--white)
+}
 
+#hero p{
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 0 auto 2rem;
+    max-width: 600px;
+}
+
+h1::before{
+    /* content: ""; */
+    position: absolute;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
+}
+
+#offer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem auto
+    width: 90%;
+    max-width: 1200px;
+}
+
+.offer-box{
+    background: var(--blue);
+    color: var(--white);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    box-sizing: border-box;
+    min-height: 20px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease;
 
 }
+
+#contact{
+    background-color: var(--black);
+    padding: 2rem 0;
+}
+
+#contact h2, #contact p{
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+#contact form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+#contact form textarea{
+    grid-column: span 2;
+    min-height: 150px;
+}
+
+.btn-primary{
+    background: var(--blue);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    
+}
+
+.btn-primary:hover{
+    background: var(--red);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:  1rem;
+    margin-top: 2rem;
+    color: var(--white);
+}
+
+form textarea{
+    grid-column: span 2;
+    min height: 150px;
+}
+
+input, textarea{
+    padding: 0.75rem;
+    border: 2px solid var(--blue);
+    border-radius: 0.5rem;
+    background:var(--white);
+    color: var(--black);
+}
+
+footer{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -151,23 +510,88 @@ h3{
 .bar {
     animation: stepUp 1s ease-in-out forwards;
 }
+}
 
+/* MEDIA QUERIES (MEDIUM) */
+@media (min-width: 768px) {
 
-/* MEDIA QUERIES (MEDIUM) */ 
-
-    #results {
-        grid-template-columns: 1fr 1fr;
-    }
-    .results-container {
+    .results-container{
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
-    .results-table {
-        width: 50%;
+
+    .results-table{
+        width: 45%;
     }
-    .bar-chart {
-        width: 50%;
+    .bar-chart{
+        width: 40%;
     }
+
+    #offer-container{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    
+    
+    table, #bar-chart{
+        width: 40%;
+    }
+
+    nav a:hover {
+        background-color: var(--blue);
+        color: var(--black);
+        padding: 0.5rem 1rem;
+    }
+
+    nav .links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    nav .burger {
+        display: none;
+    }
+}
 
 
 /* MEDIA QUERIES (LARGE) */
+@media (min-width: 1024px){
+    .results-container{
+        gap: 3rem;
+    }
+    .results-table{
+        width: 45%;
+    }
+    .bar-chart{
+        width: 40%;
+    }
+
+    #offer-container{
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+    nav a:hover {
+        background-color: var(--blue);
+        color: var(--black);
+        /* padding: 0.5rem 1rem;
+    */
+}
+
+    
+}
+
+@keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

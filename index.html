@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!-- ADD META TAG REQUIRED TO MAKE PAGE RESPONSIVE-->
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vanguard- Leading the Future of Success. Premier strategic investment and business acceleration firm for high-growth enterprises.">
     <meta name="keywords" content="business growth, strategic investment, mergers, corporate consulting, digital transformation">
-<!-- ADD META TAG FOR AUTHOR AND YOUR NAME-->
+    <meta name="author" content="Benjamin P.">
     <title>Vanguard | Leading the Future of Success</title>
-<!-- ADD LINK TO YOUR CSS-->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<!-- WRAP CONTENT IN VALIDATED, SEMANTIC HTML5 (SEE HINTS FOLDER LINKED TO IN THE CANVAS INSTRUCTIONS)-->
     <header> 
-        <h1> Vanguard</h1>
+        <div class="container">
         <nav>
-            <h2>Main Navigation</h2>
-            <ul>    
-                <li><a>About</a></li>
-                <li><a>Services</a></li>
-                <li><a>Contact</a></li>
+            <div class="logo">
+                <img src="images/vanguard-logo.svg" alt="Vanguard Logo">
+            <span><h1>Vanguard</h1></span>
+            </div>
+        <button class="burger" id="burger" aria-label="Toggle navigation"> &#9776</button>
+
+            <!-- <h2>Main Navigation</h2> -->
+  
+            <ul class="links">    
+                <li><a href="#about">About</a></li>
+                <li><a href="#offer">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -27,45 +33,46 @@
         <section id="hero">
             <h2>Innovation & Investment</h2>
             <p>We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.</p>
-            <button>Request a Consultation</button>
+            <button class="btn btn-primary">Request a Consultation</button>
         </section>
         <section id="about">
-            <div class="container">
+            <div class="container about-container">
             <h2>Our Expertise. Your Edge.</h2>
             <p>We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'</p>
             <div id="offer">
                 <h2>What We Offer</h2>
-                <div id="growth">
+                <div id="offer-container">
+                <div class="offer-box fade-slide-up">
                     <h3>Strategic Growth Consulting</h3>
                     <p>
                     Unlock new revenue streams and optimize market expansion strategies.
                     </p>
                 </div>
-                <div id="investment">
+                <div class="offer-box fade-slide-up">
                     <h3>High-Impact Investment Solutions</h3>
                     <p>
                     Maximize returns with data-driven portfolio management.
                     </p>
                 </div>
-                <div id="mergers">
+                <div class="offer-box fade-slide-up">
                     <h3>Business Acceleration & Mergers</h3>
                     <p>
                     Identify opportunities for rapid growth and high-value acquisitions.
                     </p>
                 </div>
-                <div id="transformation">
+                <div class="offer-box fade-slide-up">
                     <h3>Digital Transformation</h3>
                     <p>
                     Stay at the forefront of industry advancements with AI, blockchain, and automation.
                     </p>
                 </div>
-                <div id="advisory">
+                <div class="offer-box fade-slide-up">
                     <h3>Exclusive Executive Advisory Services</h3>
                     <p>
                     Personalized insights and leadership support for C-suite executives and high-net-worth investors.
                     </p>
                 </div>
-                <div id="corporate">
+                <div class="offer-box fade-slide-up">
                     <h3>Corporate Innovation</h3>
                     <p>
                     Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.
@@ -73,14 +80,15 @@
                 </div>
             </div>
             </div>
+            </div>
         </section>
         <section id="results">
-            <div class="container">
+
             <h2>Proven Results</h2>
             <p>
             Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.
             </p>
-
+            <div class="results-container">
             <h3>Profits</h3>
             <table>
                 <tr>
@@ -128,10 +136,10 @@
         </section>
         <section id="contact">
             <div class="container">
-            <h2>Contact Us</h2>
-            <p>
+                <h2>Contact Us</h2>
+                 <p>
             Want to take your business to the next level? Get in touch with our elite team today.
-            </p>
+                </p>
             <form>
                 <label for="fname">Full Name</label>
                 <input type="text" id="fname" name="fname">
@@ -148,15 +156,16 @@
                 <label for="help">How can we help you?</label>
                 <textarea id="help" name="help" rows="4" cols="50"></textarea>
 
-                <button type="submit">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
             </div>
         </section>
     </main>
     <footer>
-        2025 Vanguard. All rights reserved. 
-        Email: info@vanguard.com 
-        Phone: 480.123.4567
+        <p>2025 Vanguard. All rights reserved.</p> 
+        Email: <a href="mailto:info@vanguard.com">info@vanguard.com</a> 
+        Phone: <a href="tel: 4801234567">480.123.4567</a>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
